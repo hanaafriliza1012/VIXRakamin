@@ -4,8 +4,8 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 export const options = {
-    vus: 1000,
-    iterations: 3500,
+    vus: 1000, //1000 users
+    iterations: 3500, //3500 iterations
     thresholds: {
         http_req_duration: ['avg<2000'], // response time should be < 2s
         http_req_failed: ['rate<0.01'], // http errors should be less than 1%
